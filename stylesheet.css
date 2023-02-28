@@ -1,168 +1,227 @@
 @charset "UTF-8";
 
-/* 全体のスタイルシート */
-.wrapper {
-    max-width: 1080px;
-    margin: 0 auto 100px auto;
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 0.875rem;
+    color: #2a2a2a;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.7;
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
 }
 
-.img {
-    width: 100%;
+/* 中身のコンテンツを最大で設定し、共通で使用 */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 
 .sec-title {
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-.sec-title p {
-    text-align: center;
-}
-
-.sec-text {
-    text-align: center;
-    font-size: 0.9rem;
 }
 
 /* headerのスタイルシート */
-#header img {
+#header {
+    background-image: url(img/mainvisual.jpeg);
     height: 100vh;
-    width: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin-bottom: 80px;
     position: relative;
 }
 
-.site-title {
+#header .site-title {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 30px;
+    right: 30px;
 }
 
-.site-title h1 {
-    font-size: 0.9rem;
-    color: #fff;
-}
-
-/* magazineのスタイルシート */
+/* Magazineのスタイルシート */
 #magazine {
-    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 80px;
 }
 
-.flex-box {
+.flex-item {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
 }
 
-.flex-box:first-child {
-    margin-right: 20px;
-}
-
-.archive-img {
+#magazine .flex-item .item {
+    width: 49%;
     position: relative;
 }
 
-.position {
+#magazine .flex-item .text {
+    max-width: 290px;
+    margin: 0 auto;
+    padding: 15px 0;
+    color: #fff;
+    font-weight: bold;
+    background: rgb(0, 0, 0, 0.5);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: ;
+    top: 40%;
+    right: 0;
+    left: 0;
 }
 
 /* fashionのスタイルシート */
 #fashion {
-    position: relative;
-    margin-bottom: 120px;
+    text-align: center;
+    background-image: url(img/fashion.jpeg);
+    height: 520px;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    margin-bottom: 80px;
 }
 
-#fashion img {
-    height: 500px;
+.btn {
+    color: #2a2a2a;
+    padding: 14px 36px;
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 0.750rem;
+    border: 1px solid #2a2a2a;
 }
 
-.fashion-title {
-    margin-bottom: 20px;
-    font-size: 1.3rem;
+.catalog-antique {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.catalog-antique .item {
+    width: 48%;
     text-align: center;
 }
 
-.fashion-text {
-    text-align: center;
-    font-size: 0.9rem;
+.catalog-antique .sec-title {
+    margin-bottom: 40px;
 }
 
-.fashion-position {
-    position: absolute;
-    top: 30%;
+.catalog-antique .item p {
+    margin-bottom: 30px;
+    text-align: left;
 }
 
-.link {
-    padding: 15px 30px;
-    border: solid 1px #ccc;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    position: absolute;
+.catalog-antique .item p:last-child {
+    margin-bottom: 0;
 }
 
-#catalog {
-    background-color: #ccc;
-}
-
-.catalog-list {
-    display: flex;
-}
-
-.antique-list {
-    display: flex;
-}
-
-.catalog-list img,
-.antique-list img {
-    height: auto;
-}
-
-.catalog-text ,
-.antique-text {
-    font-size: 0.9rem;
-} 
-
-.catalog-items {
-    width: 50%;
-}
-
-.antique-items {
-    width: 50%;
-
-}
-
-.catalog-list {
-    margin-bottom: 120px;
-}
-
-.catalog-list:first-child {
-
+.catalog-antique .flex-item {
+    align-items: center;
 }
 
 /* footerのスタイルシート */
-.footer-list {
-    margin-bottom: 50px;
+#footer {
+    background-color: #333;
+    font-size: 0.750rem;
 }
 
-.footer-list {
-    display: flex;
+#footer .flex-item {
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
     justify-content: space-between;
-    width: 100%;
+    margin-top: 0;
 }
 
-.footer-title,
-.footer-subtitle,
-.footer-sectitle {
-    width: 31%;
-} 
+#footer .item {
+    width: 33%;
+    line-height: 2;
+}
 
-.footer-copy {
+#footer .item .title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#footer .copyright {
+    padding: 30px 0;
     text-align: center;
-    font-size: 0.7rem;
+    background-color: #fff;
+}
+
+#footer .item img {
+    
+}
+
+/* レスポンシブのスタイルシート */
+@media screen and (max-width: 896px) {
+    #magazine .flex-item {
+        flex-direction: column;
+    }
+
+    #magazine .flex-item .item {
+        width: 100%;
+    }
+
+    #magazine .flex-item .item .title {
+        font-size: 1.25rem;
+        margin-bottom: 2px;
+    }
+
+    #magazine .flex-item .item:first-child {
+        margin-bottom: 30px;
+    }
+
+    /* Fashionのスタイルbシート */
+    #fashion {
+        padding-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    .catalog-antique .flex-item {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .catalog-antique .item {
+        width: 100%;
+        /* margin-top: 60px; */
+    }
+
+    .catalog-antique {
+        padding: 30px 0;
+    }
+
+    .catalog-antique .flex-item .item:first-child {
+        margin-bottom: 60px;
+    }
+
+    /* footerのスタイルシート */
+    #footer .flex-item {
+        flex-direction: column;
+    }
+
+    #footer .flex-item .item {
+        width: 100%;
+    }
+
+    #footer .item {
+        margin-bottom: 30px;
+    }
+
+    #footer .flex-item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
 }
